@@ -1,0 +1,115 @@
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--accent-primary);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  min-height: 2.5rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.typed-text {
+  display: inline;
+}
+
+.cursor {
+  display: inline-block;
+  color: var(--accent-primary);
+  opacity: 0;
+  transition: opacity 0.1s;
+  margin-left: 2px;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+.hero-bio {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.hero-bio p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-link {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 0.8rem 1.8rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.hero-link:hover {
+  border-color: var(--accent-primary);
+  background: var(--card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 2rem 0;
+  }
+  
+  .hero-description {
+    margin-bottom: 2rem;
+  }
+  
+  .hero-links {
+    gap: 1rem;
+  }
+  
+  .hero-link {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
