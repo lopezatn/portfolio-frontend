@@ -11,16 +11,16 @@ function Projects() {
     },
     {
       title: "Project Title 2",
-      description: "Brief description of your second project. What problem does it solve? What technologies did you use? Keep it concise but informative.",
+      description: "Lorem ipsum",
       tech: ["Tech 1", "Tech 2", "Tech 3"],
-      github: "https://github.com/yourusername/project2",
+      github: "https://github.com/lopezatn/project2",
       live: null
     },
     {
       title: "Project Title 3",
-      description: "Another project description. Highlight the technical challenges you solved and the skills you demonstrated.",
+      description: "Lorem ipsum",
       tech: ["Tech 1", "Tech 2", "Tech 3"],
-      github: "https://github.com/yourusername/project3",
+      github: "https://github.com/lopezatn/project3",
       live: null
     }
   ]
