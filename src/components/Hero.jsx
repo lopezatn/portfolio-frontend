@@ -13,7 +13,6 @@ function Hero() {
       }, 80)
       return () => clearTimeout(timeout)
     } else {
-      // Blink cursor after typing is done
       const cursorInterval = setInterval(() => {
         setShowCursor(prev => !prev)
       }, 530)
@@ -27,7 +26,7 @@ function Hero() {
         <h1 className="hero-title">
           <span className="gradient-text">Agustin Lopez Bergero</span>
         </h1>
-        <p className="hero-subtitle">DevOps Engineer</p>
+        <p className="hero-subtitle">Junior DevOps Engineer</p>
         <div className="hero-description">
           <span className="typed-text">{text}</span>
           <span className={`cursor ${showCursor ? 'visible' : ''}`}>_</span>
@@ -43,7 +42,7 @@ function Hero() {
           <a href="https://github.com/lopezatn" target="_blank" rel="noopener noreferrer" className="hero-link">
             GitHub
           </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hero-link">
+          <a href="https://linkedin.com/in/lopezatn" target="_blank" rel="noopener noreferrer" className="hero-link">
             LinkedIn
           </a>
         </div>

@@ -4,23 +4,23 @@ function Projects() {
   const projects = [
     {
       title: "AWS Portfolio Infrastructure",
-      description: "Production-grade AWS infrastructure for this portfolio. Single EC2 instance with Docker, Nginx, automated HTTPS via Let's Encrypt, and secure SSM-only access. Demonstrates infrastructure-as-code principles and security best practices.",
-      tech: ["AWS EC2", "Docker", "Nginx", "Let's Encrypt", "Terraform", "SSM"],
+      description: "Security-hardened AWS infrastructure hosting this portfolio: Dockerized Nginx on EC2 with automated SSL via Let's Encrypt, Route53 DNS management, SSM-only access (no SSH), IMDSv2 enforcement, encrypted EBS volumes, IAM role-based permissions, and cost-optimized architecture. Fully provisioned with Terraform demonstrating IaC and security best practices.",
+      tech: ["AWS EC2", "Route-53", "SSM", "IAM", "Terraform", "Docker", "Nginx", "Let's Encrypt"],
       github: "https://github.com/lopezatn/portfolio-infrastructure",
-      live: "https://lopezberg.dev"
-    },
-    {
-      title: "Project Title 2",
-      description: "Lorem ipsum",
-      tech: ["Tech 1", "Tech 2", "Tech 3"],
-      github: "https://github.com/lopezatn/project2",
       live: null
     },
     {
-      title: "Project Title 3",
-      description: "Lorem ipsum",
-      tech: ["Tech 1", "Tech 2", "Tech 3"],
-      github: "https://github.com/lopezatn/project3",
+      title: "AWS DevOps Pathway",
+      description: "Production-grade AWS infrastructure: multi-AZ VPC with public/private subnets, ALB + ASG for auto-scaling web workloads, tiered security groups isolating traffic between load balancer and application tiers, CloudWatch alarms for latency/error monitoring with SNS notifications, Lambda-based EBS snapshot automation with retention policies, and full IaC using Terraform.",
+      tech: ["AWS EC2", "VPC", "ALB", "ASG", "Lambda", "CloudWatch", "SNS", "IAM", "Terraform", "Python", "Bash", "Nginx"],
+      github: "https://github.com/lopezatn/aws-devops-pathway",
+      live: null
+    },
+    {
+      title: "CI/CD Pipeline Automation",
+      description: "End-to-end deployment automation combining GitHub Actions for lightweight deployments and Jenkins for complex infrastructure pipelines. Implements GitOps workflows with automated Terraform validation, security scanning (tfsec, Trivy), Docker image builds, and zero-downtime deployments via AWS Systems Manager.",
+      tech: ["GitHub Actions", "Jenkins", "Terraform", "Docker", "tfsec", "Trivy", "AWS SSM", "GitOps"],
+      github: "https://github.com/lopezatn/portfolio-infrastructure",
       live: null
     }
   ]
