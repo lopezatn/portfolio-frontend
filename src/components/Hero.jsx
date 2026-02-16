@@ -26,16 +26,16 @@ function Hero() {
         <h1 className="hero-title">
           <span className="gradient-text">Agustin Lopez Bergero</span>
         </h1>
-        <p className="hero-subtitle">Junior DevOps Engineer</p>
+        <p className="hero-subtitle">DevOps Engineer</p>
         <div className="hero-description">
           <span className="typed-text">{text}</span>
           <span className={`cursor ${showCursor ? 'visible' : ''}`}>_</span>
         </div>
         <div className="hero-bio">
           <p>
-            Focused on reliability, automation, and observability in AWS and Linux environments. 
-            I design, build, and operate infrastructure to understand how systems behave under normal conditions and how they fail. 
-            My approach: automate early, observe signals, troubleshoot from fundamentals, and improve through iteration.
+            DevOps Engineer with 2+ years of production Linux operations experience and hands-on AWS infrastructure expertise. 
+            Built high-availability cloud environments using Terraform, Docker, and AWS services (EC2, VPC, ALB, ASG, CloudWatch). 
+            Background in incident response, system troubleshooting, and infrastructure automation from IT operations roles.
           </p>
         </div>
         <div className="hero-links">
