@@ -39,4 +39,4 @@ jobs:
             --instance-ids ${{ secrets.EC2_INSTANCE_ID }} \
             --document-name "AWS-RunShellScript" \
             --region eu-central-1 \
-            --parameters '{"commands":["aws s3 sync s3://lopezberg-portfolio-deploy/dist/ /home/ssm-user/portfolio-frontend/dist/ --region eu-central-1"]}'
+            --parameters '{"commands":["aws s3 sync s3://lopezberg-portfolio-deploy/dist/ /home/ssm-user/portfolio-frontend/dist/ --region eu-central-1 --delete --exact-timestamps"]}'
