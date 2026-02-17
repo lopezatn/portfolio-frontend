@@ -33,7 +33,8 @@ function Hero() {
         </div>
         <div className="hero-bio">
           <p>
-            DevOps Engineer experienced in production operations, Linux, and hands-on AWS infrastructure expertise. 
+            Thank you for visiting my site!
+            I'm a DevOps Engineer experienced in production operations, Linux, and hands-on AWS infrastructure expertise. 
             Built high-availability cloud environments using Terraform, Docker, and AWS services (EC2, VPC, ALB, ASG, CloudWatch). 
             Background in incident response, system troubleshooting, and infrastructure automation from IT operations roles.
           </p>
