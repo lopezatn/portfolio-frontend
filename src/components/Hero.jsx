@@ -4,7 +4,7 @@ import './Hero.css'
 function Hero() {
   const [text, setText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
-  const fullText = "Building and maintaing cloud infrastructure using Terraform, Docker, and AWS."
+  const fullText = "Building and maintaining cloud infrastructure using Terraform, Docker, and AWS."
 
   useEffect(() => {
     if (text.length < fullText.length) {
