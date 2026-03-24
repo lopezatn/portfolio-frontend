@@ -9,7 +9,7 @@ function Contact() {
           Interested in working together or have a question? Feel free to reach out.
         </p>
         <div className="contact-methods">
-          <a href="mailto:agustinlpzb@gmail.com" className="contact-button">
+          <a href="mailto:lopezberg@proton.me" className="contact-button">
             Send Email
           </a>
           <div className="contact-links">

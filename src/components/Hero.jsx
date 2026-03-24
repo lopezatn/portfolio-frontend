@@ -4,7 +4,7 @@ import './Hero.css'
 function Hero() {
   const [text, setText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
-  const fullText = "I build and secure cloud infrastructure."
+  const fullText = "Building and maintaing cloud infrastructure using Terraform, Docker, and AWS."
 
   useEffect(() => {
     if (text.length < fullText.length) {
@@ -33,11 +33,9 @@ function Hero() {
         </div>
         <div className="hero-bio">
           <p>
-            Thank you for visiting my site!
-            I'm a DevOps Engineer experienced in production operations, Linux, and hands-on AWS infrastructure expertise. 
-            Built high-availability cloud environments using Terraform, Docker, and AWS services (EC2, VPC, ALB, ASG, CloudWatch). 
-            Background in incident response, system troubleshooting, and infrastructure automation from IT operations roles.
-          </p>
+            Originally from Argentina, currently living in Berlin, I dedicate my professional time to building scalable infrastructure solutions.<br/> 
+            I maintain and automate infrastructure and application deployments so software runs reliably.<br/>
+            As an Engineer, my main goal is to provide customers with cost-effective solutions that allow them to think less about product runtime and more about improving the product itself.</p>
         </div>
         <div className="hero-links">
           <a href="https://github.com/lopezatn" target="_blank" rel="noopener noreferrer" className="hero-link">
