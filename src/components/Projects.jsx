@@ -1,29 +1,36 @@
 import './Projects.css'
 
 function Projects() {
-  const projects = [
-    {
-      title: "AWS Portfolio Infrastructure",
-      description: "Security-hardened AWS infrastructure hosting this portfolio: Dockerized Nginx on EC2 with automated SSL via Let's Encrypt, Route53 DNS management, SSM-only access (no SSH), IMDSv2 enforcement, encrypted EBS volumes, IAM role-based permissions, and cost-optimized architecture. Fully provisioned with Terraform demonstrating IaC and security best practices.",
-      tech: ["AWS EC2", "Route-53", "SSM", "IAM", "Terraform", "Docker", "Nginx", "Let's Encrypt"],
-      github: "https://github.com/lopezatn/portfolio-infrastructure",
-      live: null
-    },
-    {
-      title: "AWS DevOps Pathway",
-      description: "Production-grade AWS infrastructure: multi-AZ VPC with public/private subnets, ALB + ASG for auto-scaling web workloads, tiered security groups isolating traffic between load balancer and application tiers, CloudWatch alarms for latency/error monitoring with SNS notifications, Lambda-based EBS snapshot automation with retention policies, and full IaC using Terraform.",
-      tech: ["AWS EC2", "VPC", "ALB", "ASG", "Lambda", "CloudWatch", "SNS", "IAM", "Terraform", "Python", "Bash", "Nginx"],
-      github: "https://github.com/lopezatn/aws-devops-pathway",
-      live: null
-    },
-    {
-      title: "CI/CD Pipeline Automation",
-      description: "End-to-end deployment automation combining GitHub Actions for lightweight deployments and Jenkins for complex infrastructure pipelines. Implements GitOps workflows with automated Terraform validation, security scanning (tfsec, Trivy), Docker image builds, and zero-downtime deployments via AWS Systems Manager.",
-      tech: ["GitHub Actions", "Jenkins", "Terraform", "Docker", "tfsec", "Trivy", "AWS SSM", "GitOps"],
-      github: "https://github.com/lopezatn/portfolio-infrastructure",
-      live: null
-    }
-  ]
+const projects = [
+  {
+    title: "AWS Portfolio Infrastructure",
+    description: "Production Terraform setup provisioning EC2, security groups, IAM roles, Elastic IP, and Route 53 DNS. Features a two-stage GitHub Actions CI/CD pipeline with OIDC authentication, separating plan and apply jobs behind a human approval gate. Remote Terraform state stored in S3 with versioning. SSM-only access, IMDSv2 enforcement, and encrypted EBS volumes.",
+    tech: ["Terraform", "GitHub Actions", "AWS EC2", "IAM", "S3", "Route 53", "Docker", "Nginx", "Let's Encrypt"],
+    github: "https://github.com/lopezatn/portfolio-infrastructure",
+    live: null
+  },
+  {
+    title: "Health Check REST API",
+    description: "Flask REST API that queries Docker container health status on the host. Built with input validation to prevent command injection. Containerized with Docker, published to AWS ECR via a GitHub Actions pipeline using OIDC authentication, and deployed to EC2 automatically via AWS Systems Manager, no SSH required.",
+    tech: ["Python", "Flask", "Docker", "GitHub Actions", "AWS ECR", "AWS SSM"],
+    github: "https://github.com/lopezatn/health-check-api",
+    live: null
+  },
+  {
+    title: "AWS DevOps Pathway",
+    description: "Lab environment exploring production AWS patterns: multi-AZ VPC with public/private subnets, ALB and Auto Scaling Group for horizontal scaling, tiered security groups, CloudWatch monitoring with SNS alerting, and Lambda-based EBS snapshot automation with a 7-day retention policy. Fully provisioned with Terraform.",
+    tech: ["Terraform", "AWS VPC", "ALB", "ASG", "Lambda", "CloudWatch", "SNS", "Python", "Boto3"],
+    github: "https://github.com/lopezatn/aws-devops-pathway",
+    live: null
+  },
+  {
+    title: "Portfolio Frontend",
+    description: "React single-page application serving as a personal portfolio. Built with Vite, featuring a typing animation hero, dark/light theme toggle, and a projects showcase. Deployed automatically to AWS S3 via GitHub Actions on every push to main.",
+    tech: ["React", "Vite", "GitHub Actions", "AWS S3"],
+    github: "https://github.com/lopezatn/portfolio-frontend",
+    live: "https://lopezberg.dev"
+  }
+]
 
   return (
     <section className="projects" id="projects">
