@@ -29,6 +29,13 @@ const projects = [
     tech: ["React", "Vite", "GitHub Actions", "AWS S3"],
     github: "https://github.com/lopezatn/portfolio-frontend",
     live: "https://lopezberg.dev"
+  },
+  {
+    title: "Coming soon...",
+    description: "",
+    tech: [],
+    github: "",
+    live: ""
   }
 ]
 
