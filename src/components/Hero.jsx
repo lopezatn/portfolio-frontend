@@ -15,7 +15,7 @@ function Hero() {
     } else {
       const cursorInterval = setInterval(() => {
         setShowCursor(prev => !prev)
-      }, 530)
+      }, 550)
       return () => clearInterval(cursorInterval)
     }
   }, [text])
