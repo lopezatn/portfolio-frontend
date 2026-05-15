@@ -3,7 +3,9 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
+import Blog from './pages/Blog'
 import './App.css'
+import { Route, Routes, NavLink } from 'react-router-dom'
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -21,12 +23,35 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <>
+      <div className="corner-nav">
+        <div className="corner-nav-inner">
+          <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+            ~ home
+          </NavLink>
+          <NavLink to="/blog" className={({ isActive }) => isActive ? 'active' : ''}>
+            ~ blog
+          </NavLink>
+        </div>
+      </div>
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
-      <Projects />
-      <Contact />
-    </div>
+      <Routes>
+        <Route path="/" element={
+          <div className="app">
+            <Hero />
+            <Projects />
+            <Contact />
+          </div>
+          } 
+        />
+        <Route path="/blog" element={ 
+          <div className='app'>
+            <Blog />
+            </div>
+          } 
+        />
+      </Routes>
+    </>
   )
 }
 
