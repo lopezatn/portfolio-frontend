@@ -144,6 +144,17 @@ html {
   color: var(--accent-primary);
 }
 
+@media (max-width: 768px) {
+  .app {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
 @media (max-width: 1300px) {
   .corner-nav {
     display: none;
