@@ -7,13 +7,13 @@ function Projects() {
       <div className="projects-container">
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
+          {projects.map((project) => (
+            <div key={project.id} className="project-card">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
               <div className="project-tech">
-                {project.tech.map((tech, i) => (
-                  <span key={i} className="tech-tag">{tech}</span>
+                {project.tech.map((tech) => (
+                  <span key={tech} className="tech-tag">{tech}</span>
                 ))}
               </div>
               <div className="project-links">
