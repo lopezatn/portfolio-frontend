@@ -106,16 +106,7 @@ html {
   color: white;
 }
 
-@media (max-width: 768px) {
-  .app {
-    padding: 1.5rem 1rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-}
+
 
 .corner-nav {
   position: fixed;
