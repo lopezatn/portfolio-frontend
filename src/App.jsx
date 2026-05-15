@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
+import { Route, Routes, NavLink } from 'react-router-dom'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
 import Blog from './pages/Blog'
 import './App.css'
-import { Route, Routes, NavLink } from 'react-router-dom'
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -42,13 +42,13 @@ function App() {
             <Projects />
             <Contact />
           </div>
-          } 
+        } 
         />
         <Route path="/blog" element={ 
-          <div className='app'>
+          <div className="app">
             <Blog />
-            </div>
-          } 
+          </div>
+        } 
         />
       </Routes>
     </>

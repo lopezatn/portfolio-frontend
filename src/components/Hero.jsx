@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import './Hero.css'
 
+const fullText = "Building and maintaining cloud infrastructure using Terraform, Docker, and AWS."
+
 function Hero() {
   const [text, setText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
-  const fullText = "Building and maintaining cloud infrastructure using Terraform, Docker, and AWS."
 
   useEffect(() => {
     if (text.length < fullText.length) {
