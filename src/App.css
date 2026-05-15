@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Dark theme (default) */
   --bg-primary: #0a0a0f;
   --bg-secondary: #13131f;
   --bg-gradient-start: #0f0f1e;
@@ -98,18 +97,15 @@ body {
   background-clip: text;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
 ::selection {
   background: var(--accent-primary);
   color: white;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .app {
     padding: 1.5rem 1rem;
