@@ -31,11 +31,33 @@ function Hero() {
           <span className="typed-text">{text}</span>
           <span className={`cursor ${showCursor ? 'visible' : ''}`}>_</span>
         </div>
-        <div className="hero-bio">
-          <p>
-            Originally from Argentina, currently living in Berlin, I dedicate my professional time to building scalable infrastructure solutions.<br/> 
-            I maintain and automate infrastructure and application deployments so software runs reliably.<br/>
-            As an Engineer, my main goal is to provide customers with cost-effective solutions that allow them to think less about product runtime and more about improving the product itself.</p>
+        <div className="terminal-bio">
+          <div className="terminal-bar">
+            <span className="terminal-dot dot-red" />
+            <span className="terminal-dot dot-yellow" />
+            <span className="terminal-dot dot-green" />
+            <span className="terminal-title">agustin@lopezberg: ~</span>
+          </div>
+          <div className="terminal-body">
+            <div className="terminal-line">
+              <span className="t-prompt">agustin@lopezberg</span>
+              <span className="t-colon">:</span>
+              <span className="t-path">~</span>
+              <span className="t-shell">$ cat about.txt</span>
+            </div>
+            <p className="t-output">
+              Originally from Argentina, currently living in Berlin, I dedicate my professional time to building scalable infrastructure solutions.<br/>
+              I maintain and automate infrastructure and application deployments so software runs reliably.<br/>
+              As an Engineer, my main goal is to provide customers with cost-effective solutions that allow them to think less about product runtime and more about improving the product itself.
+            </p>
+            <div className="terminal-line">
+              <span className="t-prompt">agustin@lopezberg</span>
+              <span className="t-colon">:</span>
+              <span className="t-path">~</span>
+              <span className="t-shell">$ </span>
+              <span className="t-cursor" />
+            </div>
+          </div>
         </div>
         <div className="hero-links">
           <a href="https://github.com/lopezatn" target="_blank" rel="noopener noreferrer" className="hero-link">
