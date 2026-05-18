@@ -90,6 +90,11 @@
   transform: translateX(2px);
 }
 
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .projects {
