@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import './App.css'
 
 function App() {
@@ -47,6 +48,12 @@ function App() {
         <Route path="/blog" element={ 
           <div className="app">
             <Blog />
+          </div>
+        } 
+        />
+        <Route path="/blog/:slug" element={ 
+          <div className="app">
+            <BlogPost />
           </div>
         } 
         />

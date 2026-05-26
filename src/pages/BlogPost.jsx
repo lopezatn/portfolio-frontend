@@ -1,11 +1,18 @@
-import { Link } from 'react-router-dom'
+import { useParams, Link, Navigate } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { posts } from '../data/posts'
-import './Blog.css'
+import './BlogPost.css'
 
-function BlogCard({ post }) {
+function BlogPost() {
+  const { slug } = useParams()
+  const post = posts.find(p => p.slug === slug)
+
+  if (!post) return <Navigate to="/blog" replace />
+
   return (
-    <article className="blog-card">
-      <div className="terminal-bio blog-card-terminal">
+    <article className="blog-post">
+      <div className="terminal-bio blog-post-terminal">
         <div className="terminal-bar">
           <span className="terminal-dot dot-red" />
           <span className="terminal-dot dot-yellow" />
@@ -19,9 +26,8 @@ function BlogCard({ post }) {
             <span className="t-path">~/posts</span>
             <span className="t-shell">$ cat {post.slug}.md</span>
           </div>
-          <div className="blog-card-meta">
-            <span className="blog-card-title">{post.title}</span>
-            <span className="blog-card-info">
+          <div className="blog-post-header-meta">
+            <span className="blog-post-header-info">
               {post.displayDate}
               {post.tags.map(tag => (
                 <span key={tag} className="blog-tag">{tag}</span>
@@ -31,23 +37,18 @@ function BlogCard({ post }) {
           </div>
         </div>
       </div>
-      <p className="blog-card-excerpt">{post.excerpt}</p>
-      <Link to={`/blog/${post.slug}`} className="blog-card-cta">read more →</Link>
+
+      <div className="post-content">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {post.content}
+        </ReactMarkdown>
+      </div>
+
+      <div className="blog-post-footer">
+        <Link to="/blog" className="back-link">← back to blog</Link>
+      </div>
     </article>
   )
 }
 
-function Blog() {
-  return (
-    <section className="blog">
-      <h1 className="section-title">blog</h1>
-      <div className="blog-list">
-        {posts.map(post => (
-          <BlogCard key={post.slug} post={post} />
-        ))}
-      </div>
-    </section>
-  )
-}
-
-export default Blog
+export default BlogPost
